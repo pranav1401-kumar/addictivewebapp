@@ -18,7 +18,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchUserData = async () => {
             const token = localStorage.getItem('token');
-            const res = await axios.get('http://localhost:5000/api/users/details', {
+            const res = await axios.get('https://addictivebackend.vercel.app/api/users/details', {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -36,7 +36,7 @@ const Dashboard = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const res = await axios.put('http://localhost:5000/api/users/update', {
+            const res = await axios.put('https://addictivebackend.vercel.app/api/users/update', {
                 bio,
                 description
             }, {
@@ -82,7 +82,7 @@ const Dashboard = () => {
     
         try {
             const token = localStorage.getItem('token');
-            const res = await axios.post('http://localhost:5000/api/users/upload-video', formData, {
+            const res = await axios.post('https://addictivebackend.vercel.app/api/users/upload-video', formData, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                     'Content-Type': 'multipart/form-data'

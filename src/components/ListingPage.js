@@ -9,7 +9,7 @@ const UserVideos = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             const token = localStorage.getItem('token');
-            const res = await axios.get('http://localhost:5000/api/users/users-with-videos', {
+            const res = await axios.get('https://addictivebackend.vercel.app/api/users/users-with-videos', {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -42,7 +42,7 @@ const UserVideos = () => {
                                         <CardMedia
                                             component="video"
                                             controls
-                                            src={`http://localhost:5000${video.videoUrl}`}
+                                            src={`https://addictivebackend.vercel.app/${video.videoUrl}`}
                                             title={video.title}
                                         />
                                         <CardContent>

@@ -15,7 +15,7 @@ const Login = () => {
         setError('');
 
         try {
-            const res = await axios.post('http://localhost:5000/api/users/login', {
+            const res = await axios.post('https://addictivebackend.vercel.app/api/users/login', {
                 firstName,
                 password
             });
